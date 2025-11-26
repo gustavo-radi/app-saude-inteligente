@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { ShoppingBag, Search, Filter, Star, Heart } from 'lucide-react';
+import { ShoppingBag, Search, Filter } from 'lucide-react';
 
 const CATEGORIES = [
   { id: 'all', name: 'Todos' },
@@ -64,8 +64,8 @@ export default function LojaPage() {
         {/* Empty State */}
         <div className="text-center py-20">
           <ShoppingBag className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Nenhum produto cadastrado</h3>
-          <p className="text-gray-600">Ainda não há produtos disponíveis na loja</p>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Nenhum produto disponível</h3>
+          <p className="text-gray-600">Os produtos serão adicionados em breve</p>
         </div>
 
         {/* Vendor CTA */}

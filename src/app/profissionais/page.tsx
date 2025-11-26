@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Calendar, MapPin, Video, Star, Clock, Filter, Search } from 'lucide-react';
+import { Calendar, Search, Video } from 'lucide-react';
 
 export default function ProfissionaisPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -84,8 +84,8 @@ export default function ProfissionaisPage() {
         {/* Empty State */}
         <div className="text-center py-20">
           <Calendar className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Nenhum profissional cadastrado</h3>
-          <p className="text-gray-600">Ainda não há profissionais ou clínicas cadastrados na plataforma</p>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Nenhum profissional disponível</h3>
+          <p className="text-gray-600">Os profissionais serão adicionados em breve</p>
         </div>
 
         {/* Professional CTA */}

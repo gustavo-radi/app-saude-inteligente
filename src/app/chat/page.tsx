@@ -15,12 +15,12 @@ export default function ChatPage() {
   const [inputValue, setInputValue] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Inicializar mensagens apenas no cliente
+  // Inicializar mensagens apenas no cliente para evitar hydration mismatch
   useEffect(() => {
-    setMounted(true);
+    setIsMounted(true);
     setMessages([
       {
         id: '1',
@@ -91,8 +91,8 @@ export default function ChatPage() {
     }
   };
 
-  // Evitar hydration mismatch mostrando loading inicial
-  if (!mounted) {
+  // Renderizar loading state durante hydration
+  if (!isMounted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex items-center justify-center">
         <div className="text-center">
